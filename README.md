@@ -1,4 +1,0 @@
-BukkitRepo
-==========
-
-Bukkit repository
