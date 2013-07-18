@@ -1,100 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html class="no-js" lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>bukkitrepo</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta name="description" content="">
-      <link rel="stylesheet" href="css/styles.css">
-   </head>
-   <body>
-      <div class="container">
+<head>
+   <meta charset="utf-8">
+   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+   <title>bukkitrepo</title>
+   <meta content="width=device-width,initial-scale=1" name="viewport">
+   <meta content="" name="description">
+   <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
       <div class="header"></div>
+
       <div class="clear"></div>
+
       <div class="main-menu-container">
          <div class="navbar">
             <div class="navbar-inner">
                <div class="container">
                   <a class="brand" href="index.html">BukkitRepo</a>
+
                   <div class="nav-collapse collapse">
                      <ul class="nav">
-                        <li class="active"><a href="index.html">Search</a></li>
-                        <li class=""><a href="http://dev.bukkit.org">Add a library</a></li>
+                        <li class="active">
+                           <a href="index.html">Search</a>
+                        </li>
+
+                        <li class="">
+                           <a href="http://dev.bukkit.org">Add a library</a>
+                        </li>
                      </ul>
                   </div>
                </div>
             </div>
          </div>
       </div>
+
       <div class="clear"></div>
+
       <div class="page">
          <div class="row">
             <div class="span7">
-               <p><a target="_blank" href="http://dev.bukkit.org">BukkitDev</a>&nbsp;lacks a proper repository for libraries for bukkit</a>.
-                  <br>This aims to fix that.
-                  <br>Features include maven repository and jenkins ci.
-               </p>
+               <p><a href="http://dev.bukkit.org" target="_blank">BukkitDev</a>&nbsp;lacks a proper repository for libraries for bukkit.
+               <br>
+               This aims to fix that.
+               <br>
+               Features include maven repository and jenkins ci.</p>
+               <br>
+               <div class="row">
+                  <div class="span12">
+                     <div class="packages-table-container">
+                        <table border="0" cellpadding="0" cellspacing="0" class="table table-striped" id="example" style="margin-top: 10px">
+                           <thead>
+                              <tr>
+                                 <th>Library</th>
+                                 <th>Link</th>
+                              </tr>
+                           </thead>
+
+                           <tbody>
+                              <tr class="odd gradeX" id="Bukkit">
+                                 <td style="white-space: nowrap">
+                                    <a href="http://dev.bukkit.org">Bukkit</a><br>
+
+                                    <p class="muted">EvilSeph</p>
+
+                                    <div style="display: none">
+                                       Bukkit is an api for minecraft
+                                    </div>
+                                 </td>
+
+                                 <td style="padding: 0; width: 100%">
+                                    <div style="position: relative; padding: 8px">
+                                       <p style="padding: 0; margin: 0"><button class="btn" data-target="#more" data-toggle="collapse">More</button> <input class="input-block-level" readonly style="margin: 0" type="text" value="http://www.bukkit.org/"></p>
+
+                                       <div class="collapse" id="more">
+                                          <br>
+                                          <p>Maven Dependancy</p>
+                                          <pre>
+                                          &lt;dependancy&gt;
+                                          &lt;groupId&gt;org.bukkit&lt;/groupId&gt;
+                                          &lt;artifactId&gt;bukkit&lt;/artifactId&gt;
+                                          &lt;version&gt;1.6.2 SNAPSHOT&lt;/version&gt;
+                                          &lt;/dependancy&gt;
+                                          </pre>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+
+               <div style="clear: both"></div>
+
+               <div class="clear"></div>
+               <script src="./js/jquery.js"></script>
+               <script src="./js/datatables.js"></script>
+               <script src="./js/handlebars.js"></script>
+               <script src="./js/bootstrap.min.js"></script>
+               <script src="./js/search.js"></script>
+
                <table style="margin-top: 15px; margin-bottom: 15px">
-               <thead>
-                  <tr>
+                  <thead>
+                     <tr></tr>
+                  </thead>
+               </table>
             </div>
-            <div class="span5">
-            </div>
-         </div>
-         <div class="row" ng-app="">
-         <div class="span12">
-         <div class="">
-         <div class="packages-table-container">
-         <table style="margin-top: 10px" cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example">
-         <thead>
-         <tr>
-         <th>Library
-         </th>
-         <th>Link
-         </th>
-         </tr></thead><tbody>
-         <tr id="Bukkit" class="odd gradeX">
-         <td style="white-space: nowrap"><a href="http://dev.bukkit.org">Bukkit</a><br><p class="muted">EvilSeph</p> 
-         <div style="display: none">Bukkit is an api for minecraft
-         </div>
-         </td>
-         <td style="padding: 0; width: 100%">
-         <div style="position: relative; padding: 8px">
-         <p style="padding: 0; margin: 0">
-         <button class="btn" data-toggle="collapse" data-target="#more">
-         More
-         </button>
-         <input type="text" class="input-block-level" style="margin: 0" readonly value="http://www.bukkit.org/"></p>
-         <div id="more" class="collapse">
-         <br>
-         <p>Maven Dependancy</p>
-         <pre>
-         &lt;dependancy&gt;
-         &lt;groupId&gt;org.bukkit&lt;/groupId&gt;
-         &lt;artifactId&gt;bukkit&lt;/artifactId&gt;
-         &lt;version&gt;1.6.2 SNAPSHOT&lt;/version&gt;
-         &lt;/dependancy&gt;
-         </pre>
-         </div>
-         </td>
-         </tr>
-         </tbody>
-         </table>
-         </div>
-         </div>
-         </div>
-         </div>
-         <div style="clear: both">
-         </div>
-         </div>
-         <div class="clear">
          </div>
       </div>
-      <script src="./js/jquery.js"></script>
-      <script src="./js/datatables.js"></script>
-      <script src="./js/handlebars.js"></script>
-      <script src="./js/bootstrap.min.js"></script>
-      <script src="./js/search.js"></script>
-   </body>
+   </div>
+</body>
 </html>
